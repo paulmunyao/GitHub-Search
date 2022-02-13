@@ -13,7 +13,7 @@ export class FormServiceService {
   constructor(private http: HttpClient) { }
   getData():Observable<any>{
 
-    const url = "https://api.github.com/users"
+    const url = "https://api.github.com/user"
     return this.http.get<any>(url)
 
   }
