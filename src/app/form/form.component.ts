@@ -7,6 +7,7 @@ import { User } from '../user';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
+  user!: User;
 
   constructor(private http: HttpClient) { }
 
