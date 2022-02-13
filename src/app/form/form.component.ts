@@ -8,18 +8,14 @@ import { FormServiceService } from '../form-service.service';
   styleUrls: ['./form.component.css'],
   providers: [FormServiceService],
 })
-
 export class FormComponent implements OnInit {
   user!: User;
 
-  
-  getUser(){
-    return User
+
+
+  constructor(userService: FormServiceService) {
+
   }
-
-  
-
-  constructor(private http: HttpClient,) {}
 
   ngOnInit(): void {
     interface ApiResponse {
@@ -29,16 +25,6 @@ export class FormComponent implements OnInit {
       followers: number;
       following: number;
     }
-    this.http
-      .get<ApiResponse>('http://api.github.com/user')
-      .subscribe((data) => {
-        this.user = new User(
-          data.name,
-          data.location,
-          data.email,
-          data.followers,
-          data.following
-        );
-      });
+   
   }
 }
