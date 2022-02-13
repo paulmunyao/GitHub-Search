@@ -11,10 +11,8 @@ import { FormServiceService } from '../form-service.service';
 export class FormComponent implements OnInit {
   user!: User;
 
-
-
   constructor(userService: FormServiceService) {
-
+    
   }
 
   ngOnInit(): void {
@@ -25,6 +23,5 @@ export class FormComponent implements OnInit {
       followers: number;
       following: number;
     }
-   
   }
 }
