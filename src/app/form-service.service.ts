@@ -13,6 +13,7 @@ export class FormServiceService {
      email: string;
      followers: number;
      following: number;
+     repos: number;
     }
   
   
