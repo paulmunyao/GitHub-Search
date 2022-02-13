@@ -4,14 +4,20 @@ import { User } from '../user';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
   user!: User;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
+    interface ApiResponse {
+      // name: string;
+      // location: string;
+      // email: string;
+      // followers: number;
+      // following: number;
+    }
   }
-
 }
