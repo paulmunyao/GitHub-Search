@@ -16,27 +16,16 @@ export class FormServiceService {
   following: number;
   repos: any;
 
-
-  constructor(private http: HttpClient) { }
-  userFetch(username: string){
+  constructor(private http: HttpClient) {}
+  userFetch(username: string) {
     let userUrl = `https://api.github.com/users/${username}`;
-    let promise = new Promise((resolve:any, reject:any)=>{
-      this.http.get<User>(userUrl),{
+    let promise = new Promise((resolve: any, reject: any) => {
+      this.http.get<User>(userUrl, {
         headers: {
-          authorization:environment.apiToken,
-        }
-      }
-    })
-
+          authorization: environment.api_Token,
+        },
+      });
+      
+    });
   }
-
-
-
-
-
-
-
-
-
-
 }
