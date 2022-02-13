@@ -19,5 +19,9 @@ export class FormComponent implements OnInit {
       followers: number;
       following: number;
     }
+    this.http.get<ApiResponse>("https://api.github.com/user").subscribe(data=>{
+      this.user = new User(data.name,data.location,data.email,data.followers,data.following)
+
+    })
   }
 }
