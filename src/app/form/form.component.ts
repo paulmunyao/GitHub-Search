@@ -8,6 +8,7 @@ import { FormServiceService } from '../form-service.service';
   styleUrls: ['./form.component.css'],
   providers: [FormServiceService],
 })
+
 export class FormComponent implements OnInit {
   user!: User;
 
@@ -16,7 +17,9 @@ export class FormComponent implements OnInit {
     return User
   }
 
-  constructor(private http: HttpClient) {}
+  
+
+  constructor(private http: HttpClient,) {}
 
   ngOnInit(): void {
     interface ApiResponse {
