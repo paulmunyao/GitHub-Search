@@ -13,11 +13,11 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     interface ApiResponse {
-      // name: string;
-      // location: string;
-      // email: string;
-      // followers: number;
-      // following: number;
+      name: string;
+      location: string;
+      email: string;
+      followers: number;
+      following: number;
     }
   }
 }
