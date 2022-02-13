@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 export class FormServiceService {
      name: string;
      avatar: any;
+     bio: any;
      location: string;
      email: string;
      followers: number;
