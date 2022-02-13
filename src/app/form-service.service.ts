@@ -18,6 +18,6 @@ export class FormServiceService {
 
   constructor(private http: HttpClient) { }
   userFetch(username: string){
-    
+    let userUrl = `https://api.github.com/users/${username}`
   }
 }
