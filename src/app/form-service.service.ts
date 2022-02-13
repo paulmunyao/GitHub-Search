@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -18,6 +19,24 @@ export class FormServiceService {
 
   constructor(private http: HttpClient) { }
   userFetch(username: string){
-    let userUrl = `https://api.github.com/users/${username}`
+    let userUrl = `https://api.github.com/users/${username}`;
+    let promise = new Promise((resolve:any, reject:any)=>{
+      this.http.get<User>(userUrl),{
+        headers: {
+          authorization:environment.apiToken,
+        }
+      }
+    })
+
   }
+
+
+
+
+
+
+
+
+
+
 }
