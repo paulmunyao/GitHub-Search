@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -14,4 +14,7 @@ export class FormServiceService {
   followers: number;
   following: number;
   repos: any;
+
+
+  constructor(private http: HttpClient) { }
 }
