@@ -17,4 +17,7 @@ export class FormServiceService {
 
 
   constructor(private http: HttpClient) { }
+  userFetch(username: string){
+    
+  }
 }
