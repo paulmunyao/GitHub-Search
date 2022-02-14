@@ -1,27 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { User } from '../user';
+import { Form } from '@angular/forms';
 import { FormServiceService } from '../form-service.service';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css'],
-  providers: [FormServiceService],
 })
 export class FormComponent implements OnInit {
-  user!: User;
+  usersData: any;
+  repo: any;
+  search: any;
 
-  constructor(userService: FormServiceService) {
-    
+  constructor(private formService: FormServiceService) {
+    this.formService.getUsers().subscribe((userData: any[]) => {
+      console.log(userData);
+      this.usersData = userData;
+    });
+    this.formService.getRepositories().subscribe((repo: any[]) => {
+      this.repo = repo;
+    });
   }
 
-  ngOnInit(): void {
-    interface ApiResponse {
-      name: string;
-      location: string;
-      email: string;
-      followers: number;
-      following: number;
-    }
+  searchUser() {
+    this.formService.updateUser(this.search);
+    this.formService.getUsers().subscribe((userData: any[]) => {
+      console.log(userData);
+      this.usersData = userData;
+    });
+    this.formService.getRepositories().subscribe((repo: any[]) => {
+      this.repo = repo;
+    });
   }
+  ngOnInit(): void {}
 }

@@ -1,16 +1,20 @@
 <div class="input-group">
   <div class="form-outline">
-    <input type="search" id="form1" class="form-control" />
-    <label class="form-label" for="form1">Search</label>
+    <form (ngSubmit)="searchUser()">
+      <input type="search" id="form1" class="form-control" />
+      <label class="form-label" for="form1">Search</label>
+      <button class="" type="button" class="btn btn-primary" id="btn">Search
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
   </div>
-  <button (click)="getUser()" class="" type="button" class="btn btn-primary" id="btn">
-    <i class="fas fa-search"></i>
-  </button>
 </div>
-<p class="mb-0">
-  {{user.name}}
-  {{user.location}}
-  {{user.email}}
-  {{user.followers}}
-  {{user.following}}
-</p>
+<p>{{usersData.login}}</p>
+<p>{{usersData.followers}}</p>
+<p>{{usersData.following}}</p>
+<p>{{usersData.public_repos}}</p>
+
+<div class="card">
+
+
+</div>

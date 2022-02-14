@@ -1,31 +1,49 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
-
+import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
 })
 export class FormServiceService {
-  name: string;
-  avatar: any;
-  bio: any;
-  location: string;
-  email: string;
-  followers: number;
-  following: number;
-  repos: any;
+  // user!: User;
+  private name: string;
+  // url = 'https://api.github.com/users/'
+  constructor(private http: HttpClient) {
+    this.name = 'paulmunyao';
+  }
 
-  constructor(private http: HttpClient) {}
-  userFetch(username: string) {
-    let userUrl = `https://api.github.com/users/${username}`;
-    let promise = new Promise((resolve: any, reject: any) => {
-      this.http.get<User>(userUrl, {
-        headers: {
-          authorization: environment.api_Token,
-        },
-      });
-      
-    });
+  getUsers() {
+    return this.http
+      .get(
+        'https://api.github.com/users/' +
+          this.name +
+          '?client_id=' +
+          environment.api_Token
+      )
+      .pipe(
+        map((res: any) => {
+          return res;
+        })
+      );
+  }
+  getRepositories() {
+    return this.http
+      .get(
+        'https://api.github.com/users/' +
+          this.name +
+          '?client_id=' +
+          environment.api_Token
+      )
+      .pipe(
+        map((res: any) => {
+          return res;
+        })
+      );
+  }
+
+  updateUser(name: string) {
+    this.name = name;
   }
 }
