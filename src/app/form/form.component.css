@@ -1,18 +1,26 @@
-.input-group{
-   margin-top: 150px;
-   margin-left: 600px; 
-
+.header {
+  background-color: blue;
 }
 
-#form1{
-    height: 40px;
-    border-radius: 40px 40px 40px 40px;
+.title {
+  margin-left: 600px;
+  margin-top: 30px;
 }
 
-.btn{
-    width: 100px;
-    height: 40px;
-    border-radius: 40px 40px 40px 40px;
-    margin-left: 90px;
-    margin-top: 20px;
+.input-group {
+  margin-top: 60px;
+  margin-left: 600px;
+}
+
+#form1 {
+  height: 40px;
+  border-radius: 40px 40px 40px 40px;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 40px 40px 40px 40px;
+  margin-left: 90px;
+  margin-top: 20px;
 }

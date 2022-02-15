@@ -7,9 +7,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormServiceService } from './form-service.service';
 import { FormsModule } from '@angular/forms';
 import { SearchRepositoryComponent } from './search-repository/search-repository.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, FormComponent, SearchRepositoryComponent],
+  declarations: [AppComponent, FormComponent, SearchRepositoryComponent, NavbarComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule,FormsModule],
 
   providers: [FormServiceService],
