@@ -1,25 +1,52 @@
 <div class="input-group">
   <div class="form-outline">
     <form (ngSubmit)="searchUser()">
-      <input type="search" id="form1" class="form-control" />
-      <label class="form-label" for="form1">Search</label>
-      <button class="" type="button" class="btn btn-primary" id="btn">Search
-        <i class="fas fa-search"></i>
+      <input type="search" id="form1" class="form-control" [(ngModel)]="search" name="search">
+      <button class="" type="submit" class="btn btn-primary" id="btn">Search
       </button>
     </form>
   </div>
 </div>
-<div class="row">
-  <div class="col-sm-5 jumbotron col-lg-6 col-md-12 col-sm-12">
-    <img src="{{usersData.avatar_url}}" width="100%" alt="Users image" class="img-circle img-responsive">
+<div *ngIf="usersData">
+  <div class="jumbotron">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col jumbotron">
+          <img src="{{usersData.avatar_url}}" width="100px" height="100px" alt="Users image"
+            class="img-circle img-responsive">
+        </div>
+      </div>
+      <p>Username:{{usersData.login}}</p>
+      <p>Followers:{{usersData.followers}}</p>
+      <p>Following:{{usersData.following}}</p>
+      <p>Repositories:{{usersData.public_repos}}</p>
+      <div class="panel panel-default">
+        <div class="col-sm-12">
+
+          <div class="jumbotron">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <div class="panel-title">
+                  <h3 class="text-center">{{usersData.name}}:Repositories</h3>
+                </div>
+                <div class="row">
+                  <div class=" card-body">
+                    <div class="panel-body" >
+                      <div class="row">
+                        <div class="col">
+                          <p class="list-group-item repos d-flex">
+                            {{repo.name}} <a href="{{repo.html_url}}" target="_blank">View this Project</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-<p>{{usersData.login}}</p>
-<p>{{usersData.followers}}</p>
-<p>{{usersData.following}}</p>
-<p>{{usersData.public_repos}}</p>
-
-<div class="card">
-
-
 </div>

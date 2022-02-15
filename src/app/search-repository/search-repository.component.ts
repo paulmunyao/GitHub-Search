@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Form } from '@angular/forms';
 import { FormServiceService } from '../form-service.service';
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css'],
+  selector: 'app-search-repository',
+  templateUrl: './search-repository.component.html',
+  styleUrls: ['./search-repository.component.css']
+
 })
-export class FormComponent implements OnInit {
-  usersData: any;
+export class SearchRepositoryComponent implements OnInit {
+ usersData: any;
   repo: any;
   search: any;
 
   constructor(private formService: FormServiceService) {
     this.formService.getUsers().subscribe((userData: any[]) => {
+
+
       console.log(userData);
       this.usersData = userData;
     })
@@ -31,5 +33,9 @@ export class FormComponent implements OnInit {
       this.repo = repo;
     })
   }
-  ngOnInit(): void {}
+  
+
+  ngOnInit(): void {
+  }
+
 }
