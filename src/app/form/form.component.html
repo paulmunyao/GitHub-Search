@@ -16,10 +16,12 @@
             class="img-circle img-responsive">
         </div>
       </div>
-      <p>Username:{{usersData.login}}</p>
-      <p>Followers:{{usersData.followers}}</p>
-      <p>Following:{{usersData.following}}</p>
-      <p>Repositories:{{usersData.public_repos}}</p>
+      <div class="show">
+        <p>Username:{{usersData.login}}</p>
+        <p>Followers:{{usersData.followers}}</p>
+        <p>Following:{{usersData.following}}</p>
+        <p>Repositories:{{usersData.public_repos}}</p>
+      </div>
       <div class="panel panel-default">
         <div class="col-sm-12">
 
@@ -31,7 +33,7 @@
                 </div>
                 <div class="row">
                   <div class=" card-body">
-                    <div class="panel-body" >
+                    <div class="panel-body">
                       <div class="row">
                         <div class="col">
                           <p class="list-group-item repos d-flex">
