@@ -1,4 +1,4 @@
-# QuoteGenerator
+# Github Serach
 Github Search is simply a web application that let's you find another person's github profile and all their projects or repositories.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
