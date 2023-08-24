@@ -1,15 +1,13 @@
 import { Injectable } from '@angular/core';
-import { User } from './user';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
-import { map } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { map, catchError, retry } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
 })
 export class FormServiceService {
-  // user!: User;
   private name: string;
-  // url = 'https://api.github.com/users/'
   constructor(private http: HttpClient) {
     this.name = 'paulmunyao';
   }
@@ -28,6 +26,7 @@ export class FormServiceService {
         })
       );
   }
+
   getRepositories() {
     return this.http
       .get(
