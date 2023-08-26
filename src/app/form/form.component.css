@@ -16,16 +16,17 @@
   margin-top: 20px;
 }
 
-.show{
-    margin-left: 100px;
+.show {
+  margin-left: 100px;
 }
 
-#picha{
-    margin-left: 100px;
+#picha {
+  margin-left: 100px;
+  border-radius: 50%;
 }
 
-/* *body{
-    padding: 0px;
-    margin: 0px;
-    overflow-x: hidden;
+/* *body {
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden;
 } */

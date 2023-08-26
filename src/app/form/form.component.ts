@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Form } from '@angular/forms';
 import { FormServiceService } from '../form-service.service';
 @Component({
   selector: 'app-form',
@@ -16,9 +15,6 @@ export class FormComponent implements OnInit {
       console.log(userData);
       this.usersData = userData;
     })
-    this.formService.getRepositories().subscribe((repo: any[]|undefined) => {
-      this.repo = repo;
-    })
   }
 
   searchUser() {
@@ -26,9 +22,6 @@ export class FormComponent implements OnInit {
     this.formService.getUsers().subscribe((userData: any[]) => {
       console.log(userData);
       this.usersData = userData;
-    })
-    this.formService.getRepositories().subscribe((repo: any[]|undefined) => {
-      this.repo = repo;
     })
   }
   ngOnInit(): void {}

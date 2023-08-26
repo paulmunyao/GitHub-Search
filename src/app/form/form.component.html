@@ -1,8 +1,15 @@
 <div class="input-group">
   <div class="form-outline">
     <form class="form" (ngSubmit)="searchUser()">
-      <input type="search" id="form1" class="form-control" [(ngModel)]="search" name="search">
-      <button class="" type="submit" class="btn btn-primary" id="btn">Search
+      <input
+        type="search"
+        id="form1"
+        class="form-control"
+        [(ngModel)]="search"
+        name="search"
+      />
+      <button class="" type="submit" class="btn btn-primary" id="btn">
+        Search
       </button>
     </form>
   </div>
@@ -11,43 +18,24 @@
   <div class="jumbotron">
     <div class="panel-body">
       <div class="row">
-        <div class="col jumbotron" id="picha">
-          <img src="{{usersData.avatar_url}}" width="100px" height="100px" alt="Users image"
-            class="img-circle img-responsive">
+        <div class="col jumbotron">
+          <img
+            id="picha"
+            src="{{ usersData.avatar_url }}"
+            width="100px"
+            height="100px"
+            alt="Users image"
+            class="img-circle img-responsive"
+          />
         </div>
       </div>
       <div class="show">
-        <p>Username:{{usersData.login}}</p>
-        <p>Followers:{{usersData.followers}}</p>
-        <p>Following:{{usersData.following}}</p>
-        <p>Repositories:{{usersData.public_repos}}</p>
-      </div>
-      <div class="panel panel-default">
-        <div class="col-sm-12">
-
-          <div class="jumbotron">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <div class="panel-title">
-                  <h3 class="text-center">{{usersData.public_repos}}  Repositories</h3>
-                </div>
-                <div class="row">
-                  <div class=" card-body">
-                    <div class="panel-body">
-                      <div class="row"> 
-                         <div class="col">
-                           <p class="list-group-item repos d-flex">
-                            <a href="{{repo.html_url}}" target="_blank">View Repositories</a>
-                          </p>
-                         </div>
-                      </div>
-                     </div>
-                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <a href="{{ usersData.html_url }}" target="_blank">View Profile</a>
+        <p>Username:{{ usersData.login }}</p>
+        <p>Followers:{{ usersData.followers }}</p>
+        <p>Following:{{ usersData.following }}</p>
+        <p>Repositories:{{ usersData.public_repos }}</p>
+        <p>Bio:{{ usersData.bio }}</p>
       </div>
     </div>
   </div>
