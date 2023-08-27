@@ -2,14 +2,15 @@
   <div class="form-outline">
     <form class="form" (ngSubmit)="searchUser()">
       <input
-        type="search"
+        type="text"
         id="form1"
         class="form-control"
         [(ngModel)]="search"
-        name="search"
+        name="text"
       />
-      <button class="" type="submit" class="btn btn-primary" id="btn">
-        Search
+
+      <button type="submit" class="search-btn">
+        <img id="network" src="assets/images/network.png" alt="" />
       </button>
     </form>
   </div>
@@ -39,4 +40,8 @@
       </div>
     </div>
   </div>
+</div>
+
+<div>
+  <img class="captain" src="assets/images/sammy-line-searching.gif" alt="">
 </div>

@@ -1,6 +1,6 @@
 .input-group {
   margin-top: 60px;
-  margin-left: 600px;
+  margin-left: 80px;
 }
 
 #form1 {
@@ -8,12 +8,14 @@
   border-radius: 40px 40px 40px 40px;
 }
 
-.btn {
-  width: 100px;
-  height: 40px;
-  border-radius: 40px 40px 40px 40px;
-  margin-left: 90px;
-  margin-top: 20px;
+.search-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  margin-left: 155px;
+  margin-top: 8px;
 }
 
 .show {
@@ -25,8 +27,47 @@
   border-radius: 50%;
 }
 
-/* *body {
-  padding: 0px;
-  margin: 0px;
-  overflow-x: hidden;
-} */
+#network {
+  width: 30px;
+  height: 30px;
+  margin-left: 30px;
+  margin-top: -80px;
+}
+
+.captain {
+  margin-left: 500px;
+  margin-top: -500px;
+}
+
+@media (max-width: 767px) {
+  .input-group {
+    margin-top: 60px;
+    margin-left: 130px;
+  }
+
+  .captain {
+    display: none;
+  }
+
+  #form1 {
+    height: 40px;
+    width: 180px;
+    border-radius: 40px 40px 40px 40px;
+  }
+
+  .show {
+    margin-left: 120px;
+  }
+
+  #picha {
+    margin-left: 150px;
+    border-radius: 50%;
+  }
+
+  #network {
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    margin-top: -80px;
+  }
+}

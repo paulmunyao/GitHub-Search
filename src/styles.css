@@ -1,5 +1,14 @@
-body{
+body {
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+@media (max-width: 767px) {
+  body {
     padding: 0px;
     margin: 0px;
     overflow-x: hidden;
+  }
 }
